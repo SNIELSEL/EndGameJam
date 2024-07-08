@@ -34,6 +34,5 @@ public class KillEnemy : MonoBehaviour
         yield return new WaitForSeconds(1);
         killCount++;
         Destroy(enemy);
-        enemy = null;
     }
 }
