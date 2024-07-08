@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3958768681665697143}
   - component: {fileID: 8631543894392231082}
   m_Layer: 0
-  m_Name: sacabambaspis holder
+  m_Name: sacabambaspis holder Pis
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5006,7 +5006,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6f6c01eab3162fe4995cdabbb03c07c2, type: 2}
+      objectReference: {fileID: 2100000, guid: 4b6c941148513ff40847537e796b1dfe, type: 2}
     - target: {fileID: 919132149155446097, guid: f09f60504bf3b024680e5f42a4d32c95,
         type: 3}
       propertyPath: m_Name
