@@ -24,15 +24,16 @@ public class KillEnemy : MonoBehaviour
             killParticle.Play();
 
             enemy = collision.gameObject;
-
-            StartCoroutine("WaitToDestroy");
+            killCount++;
+            Destroy(collision.gameObject);
+            //StartCoroutine("WaitToDestroy");
         }
     }
 
-    IEnumerator WaitToDestroy()
+   /* IEnumerator WaitToDestroy()
     {
         yield return new WaitForSeconds(1);
         killCount++;
         Destroy(enemy);
-    }
+    }*/
 }
