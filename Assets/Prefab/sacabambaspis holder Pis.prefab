@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3958768681665697143}
   - component: {fileID: 8631543894392231082}
+  - component: {fileID: 1097462659337142828}
   m_Layer: 0
   m_Name: sacabambaspis holder Pis
   m_TagString: Enemy
@@ -49,12 +50,25 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.7101803, y: 1.5073199, z: 12.766773}
   m_Center: {x: 0.040164948, y: 0.25365996, z: 0.24688339}
+--- !u!114 &1097462659337142828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840134097677126504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db22dd0ba775e341bbc81fbdd7350ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
 --- !u!1 &7310540612597686129
 GameObject:
   m_ObjectHideFlags: 0
