@@ -3,6 +3,7 @@ using UnityEngine;
 public class CameraClamp : MonoBehaviour
 {
     public GameObject player;
+    public GameObject mainCamera;
 
     public Clamps clamps;
     public void Start()
@@ -15,8 +16,8 @@ public class CameraClamp : MonoBehaviour
 
     public void Update()
     {
-        transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+        mainCamera.transform.position = new Vector3(player.transform.position.x, mainCamera.transform.position.y, player.transform.position.z);
 
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, clamps.left, clamps.right), transform.position.y, Mathf.Clamp(transform.position.z, clamps.down, clamps.up));
+        mainCamera.transform.position = new Vector3(Mathf.Clamp(mainCamera.transform.position.x, clamps.left, clamps.right), mainCamera.transform.position.y, Mathf.Clamp(mainCamera.transform.position.z, clamps.down, clamps.up));
     }
 }

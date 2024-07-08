@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 public class EnemySpawner : MonoBehaviour
 {
     [Header("Settings")]
+    public GameObject player;
     public float spawnCycleTime;
     public float spawnDistance;
     public int spawnCount;
@@ -27,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
         if(spawnTimer <= 0)
         {
             spawnTimer = spawnCycleTime;
-            CreateEnemiesAroundPoint(spawnCount, transform.position, spawnDistance);
+            CreateEnemiesAroundPoint(spawnCount, player.transform.position, spawnDistance);
         }
     }
 
