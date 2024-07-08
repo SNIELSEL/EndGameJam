@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3958768681665697143}
   - component: {fileID: 8631543894392231082}
-  - component: {fileID: 2899611861877193796}
+  - component: {fileID: 1097462659337142828}
   m_Layer: 0
-  m_Name: sacabambaspis holder
+  m_Name: sacabambaspis holder goud
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +56,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.7101803, y: 1.5073199, z: 12.766773}
   m_Center: {x: 0.040164948, y: 0.25365996, z: 0.24688339}
---- !u!114 &2899611861877193796
+--- !u!114 &1097462659337142828
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5020,12 +5020,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6f6c01eab3162fe4995cdabbb03c07c2, type: 2}
+      objectReference: {fileID: 2100000, guid: 4b6c941148513ff40847537e796b1dfe, type: 2}
     - target: {fileID: 919132149155446097, guid: f09f60504bf3b024680e5f42a4d32c95,
         type: 3}
       propertyPath: m_Name
       value: sacabambaspis
       objectReference: {fileID: 0}
+    - target: {fileID: 6730565654623718620, guid: f09f60504bf3b024680e5f42a4d32c95,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b6c941148513ff40847537e796b1dfe, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
