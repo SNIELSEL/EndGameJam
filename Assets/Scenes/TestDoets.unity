@@ -1755,6 +1755,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
         type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 1.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 2.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
+        type: 3}
       propertyPath: CollisionModule.m_Planes.Array.data[0]
       value: 
       objectReference: {fileID: 2127759723}
@@ -1766,7 +1786,7 @@ PrefabInstance:
     - target: {fileID: 3958768681665697143, guid: 56ba447be331cc346a7162d7a9790add,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 3958768681665697143, guid: 56ba447be331cc346a7162d7a9790add,
         type: 3}
@@ -1807,6 +1827,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6022654698295775973, guid: 56ba447be331cc346a7162d7a9790add,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6022654698295775973, guid: 56ba447be331cc346a7162d7a9790add,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6022654698295775973, guid: 56ba447be331cc346a7162d7a9790add,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8631543894392231082, guid: 56ba447be331cc346a7162d7a9790add,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

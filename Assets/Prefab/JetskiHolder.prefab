@@ -218,10 +218,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5922735644653489605}
-  - component: {fileID: 1115750364120022254}
   - component: {fileID: 2102753064848962807}
-  - component: {fileID: 3356334843162569545}
   - component: {fileID: 863601936869338016}
+  - component: {fileID: 1115750364120022254}
+  - component: {fileID: 3356334843162569545}
   m_Layer: 0
   m_Name: JetskiHolder
   m_TagString: Untagged
@@ -250,24 +250,6 @@ Transform:
   - {fileID: 1368474200450824905}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1115750364120022254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8247614037472480639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd01574a9d11dce478e85de70bd39b93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 2102753064848962807}
-  jetskiBody: {fileID: 8247614037472480639}
-  speed: 50
-  right: {fileID: 1189490958297949384}
-  left: {fileID: 4506791762310045959}
-  straigt: {fileID: 1368474200450824905}
 --- !u!54 &2102753064848962807
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -278,7 +260,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 3
+  m_AngularDrag: 2
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -295,18 +277,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3356334843162569545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8247614037472480639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e50763c49efd3a04bbd02d01332f80d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &863601936869338016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -328,6 +298,36 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.6723545, z: 7.2757874}
   m_Center: {x: 0, y: 0.85401237, z: 0.40571404}
+--- !u!114 &1115750364120022254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8247614037472480639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd01574a9d11dce478e85de70bd39b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 2102753064848962807}
+  jetskiBody: {fileID: 8247614037472480639}
+  speed: 50
+  right: {fileID: 1189490958297949384}
+  left: {fileID: 4506791762310045959}
+  straigt: {fileID: 1368474200450824905}
+--- !u!114 &3356334843162569545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8247614037472480639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e50763c49efd3a04bbd02d01332f80d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8324794547517240892
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class KillEnemy : MonoBehaviour
@@ -14,17 +15,17 @@ public class KillEnemy : MonoBehaviour
         killCount = 0;
     }
 
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             killParticle = collision.gameObject.GetComponentInChildren<ParticleSystem>();
             killParticle.Play();
 
             enemy = collision.gameObject;
 
-            killCount++;
-            Destroy(collision.gameObject);
+            StartCoroutine("WaitToDestroy");
         }
     }
 
