@@ -2398,6 +2398,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.4
       objectReference: {fileID: 0}
+    - target: {fileID: 8189055718333816550, guid: 56ba447be331cc346a7162d7a9790add,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6f6c01eab3162fe4995cdabbb03c07c2, type: 2}
     - target: {fileID: 8631543894392231082, guid: 56ba447be331cc346a7162d7a9790add,
         type: 3}
       propertyPath: m_IsTrigger

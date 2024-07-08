@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 863601936869338016}
   - component: {fileID: 1115750364120022254}
   - component: {fileID: 3356334843162569545}
+  - component: {fileID: 1837395765125564666}
   m_Layer: 0
   m_Name: JetskiHolder
   m_TagString: Untagged
@@ -329,6 +330,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50763c49efd3a04bbd02d01332f80d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1837395765125564666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8247614037472480639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94dd9a062d312634fb07ea10fb391edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnCycleTime: 5
+  spawnDistance: 100
+  spawnCount: 5
+  enemyList:
+  - shark: {fileID: 840134097677126504, guid: 56ba447be331cc346a7162d7a9790add, type: 3}
+    probability: 90
+  - shark: {fileID: 840134097677126504, guid: dbd9db984db3fa7409c01b547daf0a9e, type: 3}
+    probability: 10
 --- !u!1 &8324794547517240892
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,13 +377,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8324794547517240892}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.51230747, y: 0.0010988087, z: 0.00024104297, w: 0.8588014}
-  m_LocalPosition: {x: 0, y: 59.5, z: -10}
+  m_LocalRotation: {x: 0.45484778, y: 0.0011122574, z: 0.00016841824, w: 0.8905685}
+  m_LocalPosition: {x: 0, y: 43.3, z: -16.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5922735644653489605}
-  m_LocalEulerAnglesHint: {x: 61.635, y: 0.257, z: 0.186}
+  m_LocalEulerAnglesHint: {x: 54.11, y: 0.209, z: 0.128}
 --- !u!20 &4392311812950822822
 Camera:
   m_ObjectHideFlags: 0
