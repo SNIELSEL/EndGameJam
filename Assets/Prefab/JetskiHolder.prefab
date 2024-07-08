@@ -261,7 +261,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 2
+  m_AngularDrag: 3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -285,7 +285,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8247614037472480639}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 64246a04ba3d3bc469e2d95e3b9768c8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -297,8 +297,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.6723545, z: 7.2757874}
-  m_Center: {x: 0, y: 0.85401237, z: 0.40571404}
+  m_Size: {x: 2.3313937, y: 1.6723545, z: 5.552962}
+  m_Center: {x: -0.07147813, y: 0.85401237, z: 0.02669835}
 --- !u!114 &1115750364120022254
 MonoBehaviour:
   m_ObjectHideFlags: 0
