@@ -350,11 +350,10 @@ GameObject:
   - component: {fileID: 2102753064848962807}
   - component: {fileID: 863601936869338016}
   - component: {fileID: 1115750364120022254}
-  - component: {fileID: 3356334843162569545}
   - component: {fileID: 1837395765125564666}
   m_Layer: 0
   m_Name: JetskiHolder
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -450,18 +449,6 @@ MonoBehaviour:
   left: {fileID: 4506791762310045959}
   straigt: {fileID: 1368474200450824905}
   NYOOOOOM: {fileID: 3511054519491441483}
---- !u!114 &3356334843162569545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8247614037472480639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e50763c49efd3a04bbd02d01332f80d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1837395765125564666
 MonoBehaviour:
   m_ObjectHideFlags: 0
