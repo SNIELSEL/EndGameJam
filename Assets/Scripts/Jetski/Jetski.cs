@@ -10,7 +10,7 @@ public class Jetski : MonoBehaviour
     public Rigidbody rb;
     public GameObject jetskiBody;
 
-    public float speed, crashTime;
+    public float speed, slipAmmount, turnSpeed, crashTime;
 
 
     public Transform right, left, straigt;

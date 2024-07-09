@@ -445,6 +445,8 @@ MonoBehaviour:
   rb: {fileID: 2102753064848962807}
   jetskiBody: {fileID: 8247614037472480639}
   speed: 60
+  slipAmmount: 60
+  turnSpeed: 50
   crashTime: 2
   right: {fileID: 1189490958297949384}
   left: {fileID: 4506791762310045959}
