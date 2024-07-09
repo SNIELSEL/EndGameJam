@@ -386,6 +386,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2644399585630350576, guid: 184522de417894248a8ab309fe24c1f7,
+        type: 3}
+      propertyPath: m_SplatMapDistance
+      value: 713
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644399585630350576, guid: 184522de417894248a8ab309fe24c1f7,
+        type: 3}
+      propertyPath: m_HeightmapPixelError
+      value: 87
+      objectReference: {fileID: 0}
+    - target: {fileID: 2644399585630350576, guid: 184522de417894248a8ab309fe24c1f7,
+        type: 3}
+      propertyPath: m_TreeCrossFadeLength
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3378823803689009217, guid: 184522de417894248a8ab309fe24c1f7,
         type: 3}
       propertyPath: m_Name
