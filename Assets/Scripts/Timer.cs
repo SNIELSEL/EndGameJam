@@ -32,7 +32,7 @@ public class Timer : MonoBehaviour
             gameOverUI.SetActive(true);
             endscore.SetText(killCount.ToString());
             Time.timeScale = 0;
-            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.lockState = CursorLockMode.None;
 
         }
 
