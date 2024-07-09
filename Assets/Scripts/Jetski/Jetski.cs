@@ -34,14 +34,12 @@ public class Jetski : MonoBehaviour
         {
             rb.velocity += transform.forward * speed * Time.deltaTime;
             NYOOOOOM.Play();
-            print("saka");
         }
 
         if (Input.GetKey("s"))
         {
             rb.velocity -= transform.forward * speed * Time.deltaTime;
             NYOOOOOM.Play();
-            print("bam");
         }
 
         if(Input.GetKey("a") && Input.GetKey("w"))
@@ -51,7 +49,6 @@ public class Jetski : MonoBehaviour
             rb.velocity += jetskiBody.transform.forward * 45 * Time.deltaTime;
             rb.velocity -= transform.forward * 30 * Time.deltaTime;
             NYOOOOOM.Play();
-            print("bas");
         }
 
         if(Input.GetKey("d") && Input.GetKey("w"))
@@ -61,7 +58,6 @@ public class Jetski : MonoBehaviour
             rb.velocity += jetskiBody.transform.forward * 45 * Time.deltaTime;
             rb.velocity -= transform.forward * 30 * Time.deltaTime;
             NYOOOOOM.Play();
-            print("pis");
         }
 
 

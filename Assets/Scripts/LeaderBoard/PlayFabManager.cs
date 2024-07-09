@@ -14,7 +14,7 @@ public class PlayFabManager : MonoBehaviour
     [Header("ScoreBoard")]
     public GameObject rowPrefab;
     public Transform leaderboardTransform;
-    public static string leaderboardName;
+    public string leaderboardName;
 
     [Header("eventTriggersOrChecks")]
     public string playername;
@@ -65,7 +65,7 @@ public class PlayFabManager : MonoBehaviour
 
     }
 
-    public static void SendLeaderBoard(int score)
+    public void SendLeaderBoard(int score)
     {
         var request = new UpdatePlayerStatisticsRequest
         {
@@ -81,13 +81,13 @@ public class PlayFabManager : MonoBehaviour
         PlayFabClientAPI.UpdatePlayerStatistics(request, OnLeaderBoardUpdate, OnError);
     }
 
-    static void OnError(PlayFabError error)
+    void OnError(PlayFabError error)
     {
         Debug.Log("Couldnt Log In");
         Debug.Log(error.GenerateErrorReport());
     }
 
-    static void OnLeaderBoardUpdate(UpdatePlayerStatisticsResult result)
+    void OnLeaderBoardUpdate(UpdatePlayerStatisticsResult result)
     {
         Debug.Log("Successfull leaderboard sent to " + leaderboardName);
     }

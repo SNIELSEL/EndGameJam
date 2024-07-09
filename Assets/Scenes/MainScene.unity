@@ -4767,6 +4767,7 @@ GameObject:
   - component: {fileID: 2652404251840065930}
   - component: {fileID: 6785005582655522223}
   - component: {fileID: 3508574668459562155}
+  - component: {fileID: 6785005582655522224}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4786,10 +4787,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ce81d4fefd5e14ab9ad22e767ecd20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
   timertext: {fileID: 5229507879263134687}
   pointText: {fileID: 5347385748199581494}
   gameOverUI: {fileID: 5364477393681734359}
   endscore: {fileID: 5364477393681734358}
+--- !u!114 &6785005582655522224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6274472908950965191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b0430d51449174ba7faf036337d6a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameWindow: {fileID: 0}
+  mainUI: {fileID: 0}
+  nameField: {fileID: 0}
+  rowPrefab: {fileID: 0}
+  leaderboardTransform: {fileID: 0}
+  leaderboardName: Scores
+  playername: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

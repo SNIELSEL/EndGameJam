@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
+    public PlayFabManager manager;
+
     public TextMeshProUGUI timertext;
     public TextMeshProUGUI pointText;
 
@@ -26,10 +28,11 @@ public class Timer : MonoBehaviour
 
         if (time <= 0)
         {
-            PlayFabManager.SendLeaderBoard(killCount);
+            manager.SendLeaderBoard(killCount);
             gameOverUI.SetActive(true);
             endscore.SetText(killCount.ToString());
             Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.Confined;
 
         }
 
