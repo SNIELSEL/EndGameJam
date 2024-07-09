@@ -46,8 +46,8 @@ public class Jetski : MonoBehaviour
         {
             transform.Rotate(0, -30 * Time.deltaTime, 0);
             jetskiBody.transform.rotation = Quaternion.Lerp(jetskiBody.transform.rotation, left.rotation, 1.5f * Time.deltaTime);
-            rb.velocity += jetskiBody.transform.forward * 45 * Time.deltaTime;
-            rb.velocity -= transform.forward * 30 * Time.deltaTime;
+            rb.velocity += jetskiBody.transform.forward * slipAmmount * Time.deltaTime;
+            rb.velocity -= transform.forward * turnSpeed * Time.deltaTime;
             NYOOOOOM.Play();
         }
 
@@ -55,8 +55,8 @@ public class Jetski : MonoBehaviour
         {
             transform.Rotate(0, 30 * Time.deltaTime, 0);
             jetskiBody.transform.rotation = Quaternion.Lerp(jetskiBody.transform.rotation, right.rotation, 1.5f * Time.deltaTime);
-            rb.velocity += jetskiBody.transform.forward * 45 * Time.deltaTime;
-            rb.velocity -= transform.forward * 30 * Time.deltaTime;
+            rb.velocity += jetskiBody.transform.forward * slipAmmount * Time.deltaTime;
+            rb.velocity -= transform.forward * turnSpeed * Time.deltaTime;
             NYOOOOOM.Play();
         }
 
