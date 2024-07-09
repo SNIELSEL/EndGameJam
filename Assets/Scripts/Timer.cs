@@ -19,6 +19,11 @@ public class Timer : MonoBehaviour
 
 
     // Update is called once per frame
+
+    private void Start()
+    {
+        time = 60;
+    }
     void Update()
     {
         timertext.text = time.ToString("F2");
