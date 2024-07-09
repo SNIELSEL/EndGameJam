@@ -8,8 +8,6 @@ using UnityEngine;
 public class PlayFabManager : MonoBehaviour
 {
     [Header("LeaderBoardNameStuff")]
-    public GameObject nameWindow;
-    public GameObject mainUI;
     public TMP_InputField nameField;
 
     [Header("ScoreBoard")]
@@ -127,7 +125,14 @@ public class PlayFabManager : MonoBehaviour
             TextMeshProUGUI[] texts = newRow.GetComponentsInChildren<TextMeshProUGUI>();
 
             texts[0].text = (item.Position + 1).ToString();
-            texts[1].text = item.DisplayName;
+            if(item.DisplayName != null)
+            {
+                texts[1].text = item.DisplayName;
+            }
+            else
+            {
+                texts[1].text = item.PlayFabId.ToString();
+            }
             texts[2].text = item.StatValue.ToString();
 
             Debug.Log(item.Position + " " + item.PlayFabId + " " + item.StatValue);
