@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf3c5b3519f1cc942a2498f33a11cbf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killSpeed: 10
+  killSpeed: 20
   haaiTime: 2
   enemyList:
   - rewardType: 0

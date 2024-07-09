@@ -33,11 +33,9 @@ public class KillEnemy : MonoBehaviour
                 {
                     case RewardType.Points:
                         Timer.killCount += (int)Reward;
-                        Debug.LogError("Gave Points");
                         break;
                     case RewardType.Time:
                         Timer.time += (int)Reward;
-                        Debug.LogError("Gave Time");
                         break;
                     default:
                         Debug.LogError("Cant give reward");
