@@ -7,8 +7,10 @@ public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timertext;
 
-    public float time = 60;
+    public static float time = 60;
     public Transform gameOver;
+
+    public static int killCount;
 
 
     // Update is called once per frame
