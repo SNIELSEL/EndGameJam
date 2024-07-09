@@ -1,6 +1,3 @@
-using UnityEngine;
-using static UnityEditor.Progress;
-
 [System.Serializable]
 public class EnemyData
 {

@@ -733,6 +733,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 354821169}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &358165353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1206510207579077560, guid: 0045e84aec9c5474694a14f4fd18a5e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1150210903}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &358165356 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5229507880116608239, guid: 0045e84aec9c5474694a14f4fd18a5e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1150210903}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358165353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &369275742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2565,6 +2583,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6785005583655811743, guid: 0045e84aec9c5474694a14f4fd18a5e0,
+        type: 3}
+      propertyPath: endscore
+      value: 
+      objectReference: {fileID: 358165356}
+    - target: {fileID: 6785005583655811743, guid: 0045e84aec9c5474694a14f4fd18a5e0,
+        type: 3}
+      propertyPath: gameOverUI
+      value: 
+      objectReference: {fileID: 358165353}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2597,7 +2625,7 @@ MonoBehaviour:
   nameField: {fileID: 0}
   rowPrefab: {fileID: 0}
   leaderboardTransform: {fileID: 0}
-  leaderboardName: Scores
+  leaderboardName: 
   playername: 
 --- !u!1001 &1153806607
 PrefabInstance:
