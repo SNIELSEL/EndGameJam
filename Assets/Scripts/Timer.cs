@@ -33,6 +33,7 @@ public class Timer : MonoBehaviour
             endscore.SetText(killCount.ToString());
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
 
         }
 
