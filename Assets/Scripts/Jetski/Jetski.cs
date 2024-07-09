@@ -73,10 +73,7 @@ public class Jetski : MonoBehaviour
     {
         if(collision.gameObject.tag == "Obstacle")
         {
-            if(rb.velocity.magnitude > 20)
-            {
-                Timer.time -= crashTime;
-            }
+            Timer.time -= crashTime;
         }
     }
 }
