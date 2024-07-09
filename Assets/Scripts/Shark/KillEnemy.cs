@@ -5,24 +5,24 @@ using UnityEngine;
 
 public class KillEnemy : MonoBehaviour
 {
-
     public ParticleSystem killParticle;
-
-    private void Awake()
-    {
-        Timer.killCount = 0;
-    }
-
+    public float killSpeed, haaiTime;
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            //if(collision.GetComponent<Ri>)
-            killParticle.Play();
+            if (collision.GetComponent<Rigidbody>().velocity.magnitude > killSpeed)
+            {
+                killParticle.Play();
 
-            Timer.killCount++;
-            StartCoroutine("WaitToDestroy");
+                Timer.killCount++;
+                StartCoroutine("WaitToDestroy");
+            }
+            else
+            {
+                Timer.time -= haaiTime;
+            }
         }
     }
 

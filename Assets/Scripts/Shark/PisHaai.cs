@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class PisHaai : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public ParticleSystem killParticle;
+    public float killSpeed, haaiTime, pisHaaiTime;
+
+    private void OnTriggerEnter(Collider collision)
     {
-        
+        if (collision.gameObject.tag == "Player")
+        {
+            if (collision.GetComponent<Rigidbody>().velocity.magnitude > killSpeed)
+            {
+                killParticle.Play();
+
+                Timer.time += pisHaaiTime;
+                StartCoroutine("WaitToDestroy");
+            }
+            else
+            {
+                Timer.time -= haaiTime;
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator WaitToDestroy()
     {
-        
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);
     }
 }
