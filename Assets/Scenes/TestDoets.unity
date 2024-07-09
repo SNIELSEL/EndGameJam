@@ -1466,6 +1466,21 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5853407257482903341, guid: 72c2eded36173b04da09a7d4f40319ca,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.192
+      objectReference: {fileID: 0}
+    - target: {fileID: 5853407257482903341, guid: 72c2eded36173b04da09a7d4f40319ca,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.192
+      objectReference: {fileID: 0}
+    - target: {fileID: 5853407257482903341, guid: 72c2eded36173b04da09a7d4f40319ca,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.192
+      objectReference: {fileID: 0}
+    - target: {fileID: 5853407257482903341, guid: 72c2eded36173b04da09a7d4f40319ca,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.7590413
       objectReference: {fileID: 0}
@@ -2328,115 +2343,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sacabambaspis holder blauw
       objectReference: {fileID: 0}
-    - target: {fileID: 3118780645759579601, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: stopAction
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: ringBufferMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: ShapeModule.type
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: moveWithTransform
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: ForceModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: NoiseModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: emitterVelocityMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: CollisionModule.type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: VelocityModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: ShapeModule.donutRadius
-      value: 1.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: ForceModule.inWorldSpace
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 0.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: NoiseModule.strength.scalar
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: ShapeModule.radiusThickness
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 1.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: VelocityModule.speedModifier.scalar
-      value: 1.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: InitialModule.customEmitterVelocity.x
-      value: 0.41
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: InitialModule.customEmitterVelocity.y
-      value: 0.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458014545860124529, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: InitialModule.customEmitterVelocity.z
-      value: 0.41
-      objectReference: {fileID: 0}
     - target: {fileID: 3958768681665697143, guid: 56ba447be331cc346a7162d7a9790add,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 69.8763
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3958768681665697143, guid: 56ba447be331cc346a7162d7a9790add,
         type: 3}
@@ -2446,7 +2356,7 @@ PrefabInstance:
     - target: {fileID: 3958768681665697143, guid: 56ba447be331cc346a7162d7a9790add,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.791744
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3958768681665697143, guid: 56ba447be331cc346a7162d7a9790add,
         type: 3}
@@ -2482,26 +2392,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6022654698295775973, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 6022654698295775973, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 6022654698295775973, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 7310540612597686129, guid: 56ba447be331cc346a7162d7a9790add,
-        type: 3}
-      propertyPath: m_Name
-      value: SACA death particle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2633,7 +2523,7 @@ GameObject:
   - component: {fileID: 2081654020}
   - component: {fileID: 2081654019}
   m_Layer: 0
-  m_Name: SACA death particle (1)
+  m_Name: SACA death particle Duplicate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7757,7 +7647,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 304c5e9b40189d54a95aece63c2d7b06, type: 2}
+  - {fileID: 2100000, guid: d5c49e2619038af42a8b9a590763e36b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

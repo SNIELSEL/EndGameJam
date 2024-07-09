@@ -444,7 +444,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2102753064848962807}
   jetskiBody: {fileID: 8247614037472480639}
-  speed: 50
+  speed: 60
+  crashTime: 2
   right: {fileID: 1189490958297949384}
   left: {fileID: 4506791762310045959}
   straigt: {fileID: 1368474200450824905}

@@ -10,7 +10,7 @@ public class Jetski : MonoBehaviour
     public Rigidbody rb;
     public GameObject jetskiBody;
 
-    public float speed;
+    public float speed, crashTime;
 
 
     public Transform right, left, straigt;
@@ -32,14 +32,14 @@ public class Jetski : MonoBehaviour
     {
         if(Input.GetKey("w"))
         {
-            rb.velocity += transform.forward * 60 * Time.deltaTime;
+            rb.velocity += transform.forward * speed * Time.deltaTime;
             NYOOOOOM.Play();
             print("saka");
         }
 
         if (Input.GetKey("s"))
         {
-            rb.velocity -= transform.forward * 60 * Time.deltaTime;
+            rb.velocity -= transform.forward * speed * Time.deltaTime;
             NYOOOOOM.Play();
             print("bam");
         }
@@ -69,6 +69,18 @@ public class Jetski : MonoBehaviour
         {
             jetskiBody.transform.rotation = Quaternion.Lerp(jetskiBody.transform.rotation, straigt.rotation, 1.5f * Time.deltaTime);
   
+        }
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Obstacle")
+        {
+            if(rb.velocity.magnitude > 20)
+            {
+                Timer.time -= crashTime;
+            }
         }
     }
 }
