@@ -17,9 +17,3 @@ public class Enemy
         this.rewardAmmount = rewardAmmount;
     }
 }
-
-public enum RewardType
-{
-    Points,
-    Time
-}

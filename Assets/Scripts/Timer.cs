@@ -6,6 +6,7 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timertext;
+    public TextMeshProUGUI pointText;
 
     public static float time = 60;
     public Transform gameOver;
@@ -17,6 +18,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         timertext.text = time.ToString("F2");
+        pointText.text = killCount.ToString();
 
         time -= Time.deltaTime;
 

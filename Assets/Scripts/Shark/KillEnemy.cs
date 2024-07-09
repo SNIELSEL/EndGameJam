@@ -5,8 +5,21 @@ using UnityEngine;
 
 public class KillEnemy : MonoBehaviour
 {
+    public int sharkID;
     public ParticleSystem killParticle;
-    public float killSpeed, haaiTime;
+
+    private float killSpeed, haaiTime;
+
+    private RewardType rewardType;
+    private float Reward;
+
+    public void Start()
+    {
+        Reward = SharkData.enemyList[sharkID].rewardAmmount;
+        rewardType = SharkData.enemyList[sharkID].rewardType;
+        killSpeed = SharkData.killSpeed;
+        haaiTime = SharkData.haaiTime;
+    }
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -16,7 +29,21 @@ public class KillEnemy : MonoBehaviour
             {
                 killParticle.Play();
 
-                Timer.killCount++;
+                switch (rewardType)
+                {
+                    case RewardType.Points:
+                        Timer.killCount += (int)Reward;
+                        Debug.LogError("Gave Points");
+                        break;
+                    case RewardType.Time:
+                        Timer.time += (int)Reward;
+                        Debug.LogError("Gave Time");
+                        break;
+                    default:
+                        Debug.LogError("Cant give reward");
+                        break;
+                }
+
                 StartCoroutine("WaitToDestroy");
             }
             else

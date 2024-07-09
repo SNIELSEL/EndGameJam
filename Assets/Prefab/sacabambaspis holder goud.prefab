@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3958768681665697143}
   - component: {fileID: 8631543894392231082}
   - component: {fileID: 1097462659337142828}
-  - component: {fileID: 5744580044889895172}
+  - component: {fileID: 1187484427063365843}
   m_Layer: 0
   m_Name: sacabambaspis holder goud
   m_TagString: Enemy
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
---- !u!114 &5744580044889895172
+--- !u!114 &1187484427063365843
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,13 +79,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 840134097677126504}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51eabdbdd310977458f1cdd06f2eb822, type: 3}
+  m_Script: {fileID: 11500000, guid: e50763c49efd3a04bbd02d01332f80d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sharkID: 1
   killParticle: {fileID: 3458014545860124529}
-  killSpeed: 10
-  haaiTime: 3
-  pisHaaiTime: 2
 --- !u!1 &7310540612597686129
 GameObject:
   m_ObjectHideFlags: 0
