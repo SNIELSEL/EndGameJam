@@ -4738,6 +4738,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469cb0e58c78149468f8ab5c60f2d132, type: 3}
+--- !u!114 &5364477393681734358 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2884465136004524124, guid: 469cb0e58c78149468f8ab5c60f2d132,
+    type: 3}
+  m_PrefabInstance: {fileID: 5364477393681734357}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5364477393681734359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7454276003094366061, guid: 469cb0e58c78149468f8ab5c60f2d132,
+    type: 3}
+  m_PrefabInstance: {fileID: 5364477393681734357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6274472908950965191
 GameObject:
   m_ObjectHideFlags: 0
@@ -4770,7 +4788,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timertext: {fileID: 5229507879263134687}
   pointText: {fileID: 5347385748199581494}
-  gameOver: {fileID: 0}
+  gameOverUI: {fileID: 5364477393681734359}
+  endscore: {fileID: 5364477393681734358}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

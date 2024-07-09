@@ -9,9 +9,11 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI pointText;
 
     public static float time = 60;
-    public Transform gameOver;
 
     public static int killCount;
+
+    public GameObject gameOverUI;
+    public TMP_Text endscore;
 
 
     // Update is called once per frame
@@ -24,8 +26,11 @@ public class Timer : MonoBehaviour
 
         if (time <= 0)
         {
-            //gameOver.gameObject.SetActive(true);
+            PlayFabManager.SendLeaderBoard(killCount);
+            gameOverUI.SetActive(true);
+            endscore.SetText(killCount.ToString());
             Time.timeScale = 0;
+
         }
 
     }
