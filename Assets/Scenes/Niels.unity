@@ -2585,6 +2585,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6785005583655811743, guid: 0045e84aec9c5474694a14f4fd18a5e0,
         type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1150210905}
+    - target: {fileID: 6785005583655811743, guid: 0045e84aec9c5474694a14f4fd18a5e0,
+        type: 3}
       propertyPath: endscore
       value: 
       objectReference: {fileID: 358165356}
@@ -2625,7 +2630,7 @@ MonoBehaviour:
   nameField: {fileID: 0}
   rowPrefab: {fileID: 0}
   leaderboardTransform: {fileID: 0}
-  leaderboardName: 
+  leaderboardName: Scores
   playername: 
 --- !u!1001 &1153806607
 PrefabInstance:

@@ -28,12 +28,12 @@ public class Timer : MonoBehaviour
 
         if (time <= 0)
         {
-            manager.SendLeaderBoard(killCount);
             gameOverUI.SetActive(true);
             endscore.SetText(killCount.ToString());
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            manager.SendLeaderBoard(killCount);
 
         }
 

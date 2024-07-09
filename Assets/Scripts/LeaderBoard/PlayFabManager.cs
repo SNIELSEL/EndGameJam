@@ -1,5 +1,6 @@
 using PlayFab;
 using PlayFab.ClientModels;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -22,7 +23,17 @@ public class PlayFabManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Login();
+        StartCoroutine(LoginLoop());
+    }
+
+    IEnumerator LoginLoop()
+    {
+        if (!PlayFabClientAPI.IsClientLoggedIn())
+        {
+            Login();
+            yield return new WaitForSeconds(5);
+            StartCoroutine(LoginLoop());
+        }
     }
 
     void Login()

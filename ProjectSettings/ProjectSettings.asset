@@ -803,7 +803,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Standalone: ENABLE_PLAYFABADMIN_API
+    Standalone: ENABLE_PLAYFABADMIN_API;PLAYFAB_REQUEST_TIMING
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
