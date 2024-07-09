@@ -9,6 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3382901597431962468}
+  - component: {fileID: 2870282427595860506}
+  - component: {fileID: -5725187502211069554}
+  - component: {fileID: -5425125727807772731}
   m_Layer: 0
   m_Name: turt
   m_TagString: Untagged
@@ -30,8 +33,59 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1292105381451713023}
+  - {fileID: 8468516117578225759}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2870282427595860506
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765048993304537977}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.51, y: 4.82, z: 10.18}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-5725187502211069554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765048993304537977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db22dd0ba775e341bbc81fbdd7350ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  MoveSpeed: 6
+  MinDist: 1
+--- !u!114 &-5425125727807772731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765048993304537977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e50763c49efd3a04bbd02d01332f80d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharkID: 2
+  killParticle: {fileID: 4170959049423797100}
 --- !u!1001 &1613629533367414292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -147,3 +201,83 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1001 &9145641968488971452
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3382901597431962468}
+    m_Modifications:
+    - target: {fileID: 823576404378248419, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823576404378248419, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823576404378248419, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 823576404378248419, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 823576404378248419, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823576404378248419, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823576404378248419, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823576404378248419, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823576404378248419, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823576404378248419, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321164584993633343, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: m_Name
+      value: Saca Death particle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 79de5c713ccd1c1448d01f19011d69b4, type: 3}
+--- !u!198 &4170959049423797100 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+    type: 3}
+  m_PrefabInstance: {fileID: 9145641968488971452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8468516117578225759 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 823576404378248419, guid: 79de5c713ccd1c1448d01f19011d69b4,
+    type: 3}
+  m_PrefabInstance: {fileID: 9145641968488971452}
+  m_PrefabAsset: {fileID: 0}

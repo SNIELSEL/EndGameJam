@@ -2625,18 +2625,44 @@ PrefabInstance:
       objectReference: {fileID: 911323415}
     - target: {fileID: 1837395765125564666, guid: 05daef3fb71e6b547b67048461449fa3,
         type: 3}
+      propertyPath: enemyList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837395765125564666, guid: 05daef3fb71e6b547b67048461449fa3,
+        type: 3}
+      propertyPath: enemyList.Array.data[2].shark
+      value: 
+      objectReference: {fileID: 6765048993304537977, guid: 2ecccc2f23291ae42ad0d93e0693806b,
+        type: 3}
+    - target: {fileID: 1837395765125564666, guid: 05daef3fb71e6b547b67048461449fa3,
+        type: 3}
       propertyPath: enemyList.Array.data[1].rewardType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1837395765125564666, guid: 05daef3fb71e6b547b67048461449fa3,
         type: 3}
+      propertyPath: enemyList.Array.data[2].rewardType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837395765125564666, guid: 05daef3fb71e6b547b67048461449fa3,
+        type: 3}
       propertyPath: enemyList.Array.data[0].probability
-      value: 0.9
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1837395765125564666, guid: 05daef3fb71e6b547b67048461449fa3,
         type: 3}
       propertyPath: enemyList.Array.data[1].probability
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837395765125564666, guid: 05daef3fb71e6b547b67048461449fa3,
+        type: 3}
+      propertyPath: enemyList.Array.data[2].probability
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837395765125564666, guid: 05daef3fb71e6b547b67048461449fa3,
+        type: 3}
+      propertyPath: enemyList.Array.data[2].rewardAmmount
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5922735644653489605, guid: 05daef3fb71e6b547b67048461449fa3,
         type: 3}
@@ -5049,6 +5075,8 @@ MonoBehaviour:
     rewardAmmount: 1
   - rewardType: 1
     rewardAmmount: 10
+  - rewardType: 0
+    rewardAmmount: 2
 --- !u!114 &5229507879263134687 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7176481708637631522, guid: 469cb0e58c78149468f8ab5c60f2d132,
@@ -5563,8 +5591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b0430d51449174ba7faf036337d6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameWindow: {fileID: 0}
-  mainUI: {fileID: 0}
   nameField: {fileID: 0}
   rowPrefab: {fileID: 0}
   leaderboardTransform: {fileID: 0}
