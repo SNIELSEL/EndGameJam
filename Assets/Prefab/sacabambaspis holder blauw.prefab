@@ -71,6 +71,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+  MoveSpeed: 12
+  MinDist: 1
 --- !u!114 &5382098952902189378
 MonoBehaviour:
   m_ObjectHideFlags: 0

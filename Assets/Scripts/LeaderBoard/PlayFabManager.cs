@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayFabManager : MonoBehaviour
 {
@@ -18,10 +19,53 @@ public class PlayFabManager : MonoBehaviour
     [Header("eventTriggersOrChecks")]
     public string playername;
 
+    private int id;
+    private GameObject[] managers;
+
+    private int currentSceneID;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(LoginLoop());
+        managers = GameObject.FindGameObjectsWithTag("ConnectionManager");
+
+        if (managers.Length != 1)
+        {
+            for (int i = 0; i < managers.Length; i++)
+            {
+                if (managers[i] != this.gameObject)
+                {
+                    if (managers[i].GetComponent<PlayFabManager>().id == 1)
+                    {
+                        Destroy(gameObject);
+                    }
+                }
+            }
+        }
+        else
+        {
+            if(id == 0)
+            {
+                Debug.Log("Triggerd a Login Task");
+                DontDestroyOnLoad(gameObject);
+
+                StartCoroutine(LoginLoop());
+            }
+        }
+    }
+
+    public void Update()
+    {
+        if (currentSceneID != SceneManager.GetActiveScene().buildIndex) 
+        {
+            currentSceneID = SceneManager.GetActiveScene().buildIndex;
+
+            if(SceneManager.GetActiveScene().buildIndex == 0)
+            {
+                nameField = GameObject.FindWithTag("Input").GetComponent<TMP_InputField>();
+                leaderboardTransform = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().List;
+                GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().playFabManager = this;
+            }
+        }
     }
 
     IEnumerator LoginLoop()
@@ -56,6 +100,10 @@ public class PlayFabManager : MonoBehaviour
         {
             playername = result.InfoResultPayload.PlayerProfile.DisplayName;
         }
+
+        playername = result.InfoResultPayload.PlayerProfile.DisplayName;
+
+        id++;
 
         Debug.Log("Logged in Succesfully as" + SystemInfo.deviceUniqueIdentifier);
     }
@@ -103,6 +151,8 @@ public class PlayFabManager : MonoBehaviour
 
     public void GetLeaderBoard()
     {
+        Debug.Log("Triggerd a GetLeaderBoard Task");
+
         var request = new GetLeaderboardRequest
         {
             StatisticName = leaderboardName,

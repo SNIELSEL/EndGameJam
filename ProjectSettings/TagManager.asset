@@ -7,6 +7,11 @@ TagManager:
   - Bounds
   - Enemy
   - Obstacle
+  - Row
+  - ConnectionManager
+  - Input
+  - List
+  - ButtonManager
   layers:
   - Default
   - TransparentFX

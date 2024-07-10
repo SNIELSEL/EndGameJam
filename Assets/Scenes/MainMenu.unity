@@ -529,7 +529,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 560256327}
-        m_TargetAssemblyTypeName: PlayFabManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PlayFabButtonManager, Assembly-CSharp
         m_MethodName: GetLeaderBoard
         m_Mode: 1
         m_Arguments:
@@ -1417,8 +1417,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 460929955}
   m_HandleRect: {fileID: 460929954}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.53995496
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1628,7 +1628,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1342059842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.46004504}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -1685,7 +1685,7 @@ GameObject:
   - component: {fileID: 466859762}
   m_Layer: 5
   m_Name: InputField (TMP)
-  m_TagString: Untagged
+  m_TagString: Input
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1859,7 +1859,7 @@ GameObject:
   - component: {fileID: 560256327}
   m_Layer: 0
   m_Name: Background fuckery
-  m_TagString: Untagged
+  m_TagString: ButtonManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1913,15 +1913,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 560256324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9b0430d51449174ba7faf036337d6a7, type: 3}
+  m_Script: {fileID: 11500000, guid: bd63ac7b80816a140a965a40be3276ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameField: {fileID: 466859762}
-  rowPrefab: {fileID: 8945025480152234345, guid: 60694013e8485434695cbaf69a71f95c,
-    type: 3}
-  leaderboardTransform: {fileID: 1083495094}
-  leaderboardName: Scores
-  playername: 
+  playFabManager: {fileID: 2131018728}
+  List: {fileID: 1083495094}
 --- !u!1 &594262857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2010,8 +2006,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 560256327}
-        m_TargetAssemblyTypeName: PlayFabManager, Assembly-CSharp
-        m_MethodName: SubmitNameButton
+        m_TargetAssemblyTypeName: PlayFabButtonManager, Assembly-CSharp
+        m_MethodName: SetName
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2191,7 +2187,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 20.54
+  m_ScrollSensitivity: 25
   m_Viewport: {fileID: 316820790}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 438468343}
@@ -3112,9 +3108,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1083495094}
   - component: {fileID: 1083495095}
+  - component: {fileID: 1083495096}
   m_Layer: 5
   m_Name: Content
-  m_TagString: Untagged
+  m_TagString: List
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3154,17 +3151,30 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 50
-    m_Bottom: 50
+    m_Top: 0
+    m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 0
+  m_Spacing: 46
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 1
+  m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
+--- !u!114 &1083495096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083495093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 416272f573a15344fbedbdf1275a06fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rows: []
 --- !u!1 &1132303296
 GameObject:
   m_ObjectHideFlags: 0
@@ -5012,7 +5022,7 @@ PrefabInstance:
     - target: {fileID: 2319378984727435748, guid: 60694013e8485434695cbaf69a71f95c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -308
+      value: -81.5
       objectReference: {fileID: 0}
     - target: {fileID: 2319378984727435748, guid: 60694013e8485434695cbaf69a71f95c,
         type: 3}
@@ -5324,6 +5334,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990676505}
   m_CullTransparentMesh: 1
+--- !u!1 &2131018727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2131018729}
+  - component: {fileID: 2131018728}
+  m_Layer: 0
+  m_Name: ConnectionManager
+  m_TagString: ConnectionManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2131018728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131018727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b0430d51449174ba7faf036337d6a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameField: {fileID: 466859762}
+  rowPrefab: {fileID: 8945025480152234345, guid: 60694013e8485434695cbaf69a71f95c,
+    type: 3}
+  leaderboardTransform: {fileID: 1083495094}
+  leaderboardName: Scores
+  playername: 
+--- !u!4 &2131018729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131018727}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1135.2285, y: 734.0705, z: 592.1992}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5333,3 +5393,4 @@ SceneRoots:
   - {fileID: 1654083264}
   - {fileID: 1907236118}
   - {fileID: 560256326}
+  - {fileID: 2131018729}

@@ -47,6 +47,7 @@ public class KillEnemy : MonoBehaviour
             else
             {
                 Timer.time -= haaiTime;
+                StartCoroutine("WaitToDestroy");
             }
         }
     }

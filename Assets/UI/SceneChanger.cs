@@ -6,6 +6,7 @@ public class SceneChanger : MonoBehaviour
 {
     public void SceneSwitch(string sceneName)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
     }
 
