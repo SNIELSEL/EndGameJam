@@ -106,7 +106,7 @@ public class PlayFabManager : MonoBehaviour
 
         var request = new LoginWithCustomIDRequest
         {
-            CustomId = PlayerPrefs.GetString("UserName"),
+            CustomId = PlayerPrefs.GetString("UserName ") + SystemInfo.deviceUniqueIdentifier,
             CreateAccount = true,
             InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
             {
@@ -125,7 +125,7 @@ public class PlayFabManager : MonoBehaviour
             playername = result.InfoResultPayload.PlayerProfile.DisplayName;
         }
 
-        playername = result.InfoResultPayload.PlayerProfile.DisplayName;
+        //playername = result.InfoResultPayload.PlayerProfile.DisplayName;
 
         id++;
 
