@@ -5253,7 +5253,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4190ec74c08f19e4a85b630bda4fd855, type: 2}
+      objectReference: {fileID: 2100000, guid: 2f9779a9ecb62c44793ec7bd1edea584, type: 2}
     - target: {fileID: 7880890939458615199, guid: c2a3e6ae46f4006418bb8a18fe9f020d,
         type: 3}
       propertyPath: moveWithTransform
@@ -5372,7 +5372,7 @@ PrefabInstance:
     - target: {fileID: 7880890939458615199, guid: c2a3e6ae46f4006418bb8a18fe9f020d,
         type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
-      value: 300
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
