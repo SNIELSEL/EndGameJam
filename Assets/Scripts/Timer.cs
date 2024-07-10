@@ -10,6 +10,8 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timertext;
     public TextMeshProUGUI pointText;
 
+    public GameObject HUD;
+
     public static float time = 60;
 
     public static int killCount;
@@ -32,13 +34,14 @@ public class Timer : MonoBehaviour
 
         if (time <= 0 && !gameOverUI.activeInHierarchy)
         {
+            HUD.SetActive(false);
             time = 0;
-            manager = GameObject.FindGameObjectWithTag("ConnectionManager").GetComponent<PlayFabManager>();
             gameOverUI.SetActive(true);
             endscore.SetText(killCount.ToString());
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            manager = GameObject.FindGameObjectWithTag("ConnectionManager").GetComponent<PlayFabManager>();
             manager.SendLeaderBoard(killCount);
 
         }

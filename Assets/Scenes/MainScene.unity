@@ -5543,6 +5543,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5364477393681734357}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5364477393681734360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8532224639675381221, guid: 469cb0e58c78149468f8ab5c60f2d132,
+    type: 3}
+  m_PrefabInstance: {fileID: 5364477393681734357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6274472908950965191
 GameObject:
   m_ObjectHideFlags: 0
@@ -5576,6 +5582,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   timertext: {fileID: 5229507879263134687}
   pointText: {fileID: 5347385748199581494}
+  HUD: {fileID: 5364477393681734360}
   gameOverUI: {fileID: 5364477393681734359}
   endscore: {fileID: 5364477393681734358}
 --- !u!1660057539 &9223372036854775807
