@@ -7,11 +7,6 @@ public class LeaderBoardHeightAdjuster : MonoBehaviour
 {
     public GameObject[] rows;
 
-    public void OnEnable()
-    {
-        Invoke("AdjustHeight", 0.35f);
-    }
-
     public void AdjustHeight()
     {
         RectTransform rectTransform = GetComponent<RectTransform>();

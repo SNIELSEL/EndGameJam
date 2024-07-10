@@ -360,18 +360,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 626274487}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 560256327}
         m_TargetAssemblyTypeName: PlayFabButtonManager, Assembly-CSharp
         m_MethodName: GetLeaderBoard
@@ -1990,7 +1978,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playFabManager: {fileID: 2131018728}
   List: {fileID: 1083495094}
-  nameField: {fileID: 0}
+  nameField: {fileID: 1774322277}
+  leaderBoard: {fileID: 626274487}
+  heightAdjuster: {fileID: 1083495096}
 --- !u!1 &569364906
 GameObject:
   m_ObjectHideFlags: 0
@@ -2056,7 +2046,7 @@ GameObject:
   - component: {fileID: 626274489}
   m_Layer: 5
   m_Name: Leaderbord
-  m_TagString: Untagged
+  m_TagString: LeaderBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4345,19 +4335,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 560256327}
         m_TargetAssemblyTypeName: PlayFabButtonManager, Assembly-CSharp
-        m_MethodName: SetName
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1654083265}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: SceneSwitch
+        m_MethodName: Login
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

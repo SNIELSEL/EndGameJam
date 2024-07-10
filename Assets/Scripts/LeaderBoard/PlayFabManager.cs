@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayFabManager : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class PlayFabManager : MonoBehaviour
     private GameObject[] managers;
 
     private int currentSceneID;
+    private string SceneName;
+    private GameObject LeaderBoard;
+    private LeaderBoardHeightAdjuster heightAdjuster;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +41,7 @@ public class PlayFabManager : MonoBehaviour
                     if (managers[i].GetComponent<PlayFabManager>().id == 1)
                     {
                         Destroy(gameObject);
+                        //Debug.LogError("aa");
                     }
                 }
             }
@@ -45,10 +50,7 @@ public class PlayFabManager : MonoBehaviour
         {
             if(id == 0)
             {
-                Debug.Log("Triggerd a Login Task");
                 DontDestroyOnLoad(gameObject);
-
-                StartCoroutine(LoginLoop());
             }
         }
     }
@@ -61,6 +63,8 @@ public class PlayFabManager : MonoBehaviour
 
             if(SceneManager.GetActiveScene().buildIndex == 0)
             {
+                LeaderBoard = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().leaderBoard;
+                heightAdjuster = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().heightAdjuster;
                 nameField = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().nameField;
                 leaderboardTransform = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().List;
                 GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().playFabManager = this;
@@ -72,17 +76,20 @@ public class PlayFabManager : MonoBehaviour
     {
         if (!PlayFabClientAPI.IsClientLoggedIn())
         {
-            Login();
+            //Login();
             yield return new WaitForSeconds(5);
             StartCoroutine(LoginLoop());
         }
     }
 
-    void Login()
+    public void Login(string sceneName)
     {
+        PlayFabClientAPI.ForgetAllCredentials();
+        SceneName = sceneName;
+
         var request = new LoginWithCustomIDRequest
         {
-            CustomId = SystemInfo.deviceUniqueIdentifier,
+            CustomId = nameField.text + " " + SystemInfo.deviceUniqueIdentifier,
             CreateAccount = true,
             InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
             {
@@ -92,7 +99,24 @@ public class PlayFabManager : MonoBehaviour
         PlayFabClientAPI.LoginWithCustomID(request, OnLoginSucces, OnError);
     }
 
-    void OnLoginSucces(LoginResult result)
+    public void Login(GameObject leaderboard)
+    {
+        PlayFabClientAPI.ForgetAllCredentials();
+        LeaderBoard = leaderboard;
+
+        var request = new LoginWithCustomIDRequest
+        {
+            CustomId = PlayerPrefs.GetString("UserName"),
+            CreateAccount = true,
+            InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
+            {
+                GetPlayerProfile = true
+            }
+        };
+        PlayFabClientAPI.LoginWithCustomID(request, OnLoginSucces2, OnError);
+    }
+
+    void OnLoginSucces2(LoginResult result)
     {
         playername = null;
 
@@ -106,6 +130,28 @@ public class PlayFabManager : MonoBehaviour
         id++;
 
         Debug.Log("Logged in Succesfully as" + SystemInfo.deviceUniqueIdentifier);
+
+        LeaderBoard.SetActive(true);
+
+        GetLeaderBoard();
+    }
+
+    void OnLoginSucces(LoginResult result)
+    {
+        playername = null;
+
+        if (result.InfoResultPayload.PlayerProfile != null)
+        {
+            playername = result.InfoResultPayload.PlayerProfile.DisplayName;
+        }
+
+        //playername = result.InfoResultPayload.PlayerProfile.DisplayName;
+
+        id++;
+
+        Debug.Log("Logged in Succesfully as" + SystemInfo.deviceUniqueIdentifier);
+
+        SubmitNameButton();
     }
 
     public void SubmitNameButton()
@@ -120,7 +166,8 @@ public class PlayFabManager : MonoBehaviour
     void OnDisplayNameUpdate(UpdateUserTitleDisplayNameResult result)
     {
         PlayerPrefs.SetString("UserName", result.DisplayName);
-        
+
+        SceneManager.LoadScene(SceneName);
     }
 
     public void SendLeaderBoard(int score)
@@ -165,6 +212,10 @@ public class PlayFabManager : MonoBehaviour
 
     void OnLeaderBoardGet(GetLeaderboardResult result)
     {
+        LeaderBoard = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().leaderBoard;
+        LeaderBoard.SetActive(true);
+        heightAdjuster = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().heightAdjuster;
+
         foreach (Transform item in leaderboardTransform)
         {
             Destroy(item.gameObject);
@@ -188,5 +239,13 @@ public class PlayFabManager : MonoBehaviour
 
             Debug.Log(item.Position + " " + item.PlayFabId + " " + item.StatValue);
         }
+
+        StartCoroutine(Delay());
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(0.3f);
+        heightAdjuster.AdjustHeight();
     }
 }
