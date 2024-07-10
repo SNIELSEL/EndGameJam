@@ -72,6 +72,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   MoveSpeed: 6
   MinDist: 1
+  animator: {fileID: 3729256410609762477}
 --- !u!114 &-5425125727807772731
 MonoBehaviour:
   m_ObjectHideFlags: 0

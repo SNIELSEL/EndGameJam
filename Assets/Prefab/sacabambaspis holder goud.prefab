@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8631543894392231082}
   - component: {fileID: 1097462659337142828}
   - component: {fileID: 1187484427063365843}
+  - component: {fileID: 14910697087753912}
   m_Layer: 0
   m_Name: sacabambaspis holder goud
   m_TagString: Enemy
@@ -73,6 +74,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   MoveSpeed: 12
   MinDist: 1
+  animator: {fileID: 859757576686098829}
 --- !u!114 &1187484427063365843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,6 +89,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sharkID: 1
   killParticle: {fileID: 3458014545860124529}
+--- !u!54 &14910697087753912
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840134097677126504}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5721803221700634101
 GameObject:
   m_ObjectHideFlags: 0
@@ -4999,6 +5028,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 859757576686098829}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f09f60504bf3b024680e5f42a4d32c95,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6356537520013022170}
   m_SourcePrefab: {fileID: 100100000, guid: f09f60504bf3b024680e5f42a4d32c95, type: 3}
 --- !u!1 &2306954433745694571 stripped
 GameObject:
@@ -5027,6 +5060,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6356537520013022170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2306954433745694571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5a3e1bdc41aa647a02837c6a70623c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 3958768681665697143}
 --- !u!4 &3118780645759579601 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f09f60504bf3b024680e5f42a4d32c95,

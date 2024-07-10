@@ -23,6 +23,7 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
+        killCount = 0;
         time = 60;
     }
     void Update()
