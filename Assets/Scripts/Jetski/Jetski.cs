@@ -82,7 +82,7 @@ public class Jetski : MonoBehaviour
             Timer.time -= crashTime;
             minTimeAnimation.SetTrigger("Plus");
 
-            minTime.SetText("+" + crashTime.ToString());
+            minTime.SetText("-" + crashTime.ToString());
             minTimeAnimation.Play("plustijd5");
             minTimeAnimation.SetTrigger("terug");
         }

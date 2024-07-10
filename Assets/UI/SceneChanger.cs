@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneChanger : MonoBehaviour
 {
+    public void Start()
+    {
+        Time.timeScale = 1;
+    }
+
     public void SceneSwitch(string sceneName)
     {
         Time.timeScale = 1;
