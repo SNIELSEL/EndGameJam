@@ -9,6 +9,7 @@ public class UsernameFill : MonoBehaviour
 
     public void SetName()
     {
+        GameObject.FindWithTag("ConnectionManager").GetComponent<PlayFabManager>().nameField = inputField;
         inputField.text = PlayerPrefs.GetString("UserName");
     }
 
