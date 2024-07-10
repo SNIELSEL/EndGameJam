@@ -85,6 +85,7 @@ public class KillEnemy : MonoBehaviour
 
     IEnumerator WaitToDestroy()
     {
+        GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1);
         Destroy(gameObject);
     }
