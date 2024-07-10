@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Audio;
+using static UnityEngine.InputSystem.LowLevel.InputStateHistory;
+using TMPro;
 
 public class Jetski : MonoBehaviour
 {
@@ -12,6 +14,8 @@ public class Jetski : MonoBehaviour
 
     public float speed, slipAmmount, turnSpeed, crashTime;
 
+    public TextMeshProUGUI minTime;
+    public Animator minTimeAnimation;
 
     public Transform right, left, straigt;
 
@@ -22,9 +26,11 @@ public class Jetski : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        minTimeAnimation = GameObject.Find("plus tijd5").GetComponent<Animator>();
+        minTime = GameObject.Find("plus tijd5").GetComponent<TextMeshProUGUI>();
     }
 
 
@@ -74,6 +80,11 @@ public class Jetski : MonoBehaviour
         if(collision.gameObject.tag == "Obstacle")
         {
             Timer.time -= crashTime;
+            minTimeAnimation.SetTrigger("Plus");
+
+            minTime.SetText("+" + crashTime.ToString());
+            minTimeAnimation.Play("plustijd5");
+            minTimeAnimation.SetTrigger("terug");
         }
     }
 }
