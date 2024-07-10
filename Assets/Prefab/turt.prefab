@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -5725187502211069554}
   - component: {fileID: -5425125727807772731}
   - component: {fileID: 1653832603937861923}
+  - component: {fileID: 2537238935081195988}
   m_Layer: 0
   m_Name: turt
   m_TagString: Untagged
@@ -74,6 +75,7 @@ MonoBehaviour:
   MoveSpeed: 6
   MinDist: 1
   animator: {fileID: 3729256410609762477}
+  dead: 0
 --- !u!114 &-5425125727807772731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +190,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!54 &2537238935081195988
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765048993304537977}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1613629533367414292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -365,6 +394,121 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Saca Death particle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: ShapeModule.donutRadius
+      value: 1.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: ForceModule.inWorldSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: NoiseModule.strength.scalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: RotationModule.curve.scalar
+      value: 2.5272367
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: InitialModule.startSize.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: VelocityModule.speedModifier.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: InitialModule.customEmitterVelocity.x
+      value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: InitialModule.customEmitterVelocity.y
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: InitialModule.customEmitterVelocity.z
+      value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118870674943461328, guid: 79de5c713ccd1c1448d01f19011d69b4,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

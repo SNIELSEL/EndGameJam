@@ -9,6 +9,7 @@ public class SharkBehaviour : MonoBehaviour
     public Animator animator;
 
     private RaycastHit hit;
+    public bool dead;
 
     void Start()
     {
@@ -17,13 +18,16 @@ public class SharkBehaviour : MonoBehaviour
 
     void Update()
     {
-        // Look at the player
-        transform.LookAt(Player);
-
-        // If the shark is far enough from the player, move towards the player
-        if (Vector3.Distance(transform.position, Player.position) >= MinDist)
+        if (!dead)
         {
-            transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+            // Look at the player
+            transform.LookAt(Player);
+
+            // If the shark is far enough from the player, move towards the player
+            if (Vector3.Distance(transform.position, Player.position) >= MinDist)
+            {
+                transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+            }
         }
     }
 

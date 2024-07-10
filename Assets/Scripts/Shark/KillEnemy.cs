@@ -85,8 +85,10 @@ public class KillEnemy : MonoBehaviour
 
     IEnumerator WaitToDestroy()
     {
+        GetComponent<SharkBehaviour>().dead = true;
         GetComponent<AudioSource>().Play();
-        yield return new WaitForSeconds(1);
+        GetComponent<Rigidbody>().useGravity = true;
+        yield return new WaitForSeconds(10);
         Destroy(gameObject);
     }
 }
