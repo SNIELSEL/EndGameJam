@@ -12,6 +12,8 @@ TagManager:
   - Input
   - List
   - ButtonManager
+  - PlusTijd
+  - PlusPoint
   layers:
   - Default
   - TransparentFX
