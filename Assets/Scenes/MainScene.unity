@@ -5705,7 +5705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf3c5b3519f1cc942a2498f33a11cbf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killSpeed: 22
+  killSpeed: 25
   haaiTime: 2
   enemyList:
   - rewardType: 0
@@ -6109,7 +6109,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7796223154045490438, guid: 469cb0e58c78149468f8ab5c60f2d132,
         type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 942589434}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 469cb0e58c78149468f8ab5c60f2d132, type: 3}
