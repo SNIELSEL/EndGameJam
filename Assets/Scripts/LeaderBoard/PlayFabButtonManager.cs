@@ -12,6 +12,8 @@ public class PlayFabButtonManager : MonoBehaviour
     public TMP_InputField nameField;
     public GameObject leaderBoard;
     public LeaderBoardHeightAdjuster heightAdjuster;
+    public GameObject duplicateNameError;
+    public GameObject invalidNameLengthError;
     public void GetLeaderBoard()
     {
         if (PlayFabClientAPI.IsClientLoggedIn())

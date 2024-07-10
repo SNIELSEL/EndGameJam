@@ -24,9 +24,18 @@ public class PlayFabManager : MonoBehaviour
     private GameObject[] managers;
 
     private int currentSceneID;
+
     private string SceneName;
-    private GameObject LeaderBoard;
+    private string currentErrorName;
+
+    private GameObject leaderBoard;
+
+    private GameObject currentError;
+    private GameObject duplicateNameError;
+    private GameObject invalidNameLengthError;
+
     private LeaderBoardHeightAdjuster heightAdjuster;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,7 +72,9 @@ public class PlayFabManager : MonoBehaviour
 
             if(SceneManager.GetActiveScene().buildIndex == 0)
             {
-                LeaderBoard = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().leaderBoard;
+                invalidNameLengthError = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().invalidNameLengthError;
+                duplicateNameError = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().duplicateNameError;
+                leaderBoard = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().leaderBoard;
                 heightAdjuster = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().heightAdjuster;
                 nameField = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().nameField;
                 leaderboardTransform = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().List;
@@ -102,7 +113,7 @@ public class PlayFabManager : MonoBehaviour
     public void Login(GameObject leaderboard)
     {
         PlayFabClientAPI.ForgetAllCredentials();
-        LeaderBoard = leaderboard;
+        leaderBoard = leaderboard;
 
         var request = new LoginWithCustomIDRequest
         {
@@ -131,7 +142,7 @@ public class PlayFabManager : MonoBehaviour
 
         Debug.Log("Logged in Succesfully as" + SystemInfo.deviceUniqueIdentifier);
 
-        LeaderBoard.SetActive(true);
+        leaderBoard.SetActive(true);
 
         GetLeaderBoard();
     }
@@ -188,8 +199,26 @@ public class PlayFabManager : MonoBehaviour
 
     void OnError(PlayFabError error)
     {
-        Debug.Log("Couldnt Log In");
-        Debug.Log(error.GenerateErrorReport());
+        currentErrorName = error.Error.ToString();
+
+        switch (currentErrorName)
+        {
+            case "NameNotAvailable":
+                duplicateNameError = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().duplicateNameError;
+                currentError = duplicateNameError;
+                StartCoroutine(ErrorDelay());
+                break;
+            case "InvalidParams":
+                invalidNameLengthError = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().invalidNameLengthError;
+                currentError = invalidNameLengthError;
+                StartCoroutine(ErrorDelay());
+                break;
+            default:
+                Debug.LogError("Couldnt Log In. Encounterd " + error.Error.ToString());
+                Debug.LogError("error not yet implemented ");
+                Debug.LogError(error.GenerateErrorReport());
+                break;
+        }
     }
 
     void OnLeaderBoardUpdate(UpdatePlayerStatisticsResult result)
@@ -212,8 +241,8 @@ public class PlayFabManager : MonoBehaviour
 
     void OnLeaderBoardGet(GetLeaderboardResult result)
     {
-        LeaderBoard = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().leaderBoard;
-        LeaderBoard.SetActive(true);
+        leaderBoard = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().leaderBoard;
+        leaderBoard.SetActive(true);
         heightAdjuster = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().heightAdjuster;
 
         foreach (Transform item in leaderboardTransform)
@@ -247,5 +276,12 @@ public class PlayFabManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         heightAdjuster.AdjustHeight();
+    }
+
+    IEnumerator ErrorDelay()
+    {
+        currentError.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        currentError.SetActive(false);
     }
 }
