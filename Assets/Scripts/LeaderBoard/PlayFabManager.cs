@@ -61,7 +61,7 @@ public class PlayFabManager : MonoBehaviour
 
             if(SceneManager.GetActiveScene().buildIndex == 0)
             {
-                nameField = GameObject.FindWithTag("Input").GetComponent<TMP_InputField>();
+                nameField = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().nameField;
                 leaderboardTransform = GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().List;
                 GameObject.FindWithTag("ButtonManager").GetComponent<PlayFabButtonManager>().playFabManager = this;
             }
@@ -119,7 +119,8 @@ public class PlayFabManager : MonoBehaviour
 
     void OnDisplayNameUpdate(UpdateUserTitleDisplayNameResult result)
     {
-
+        PlayerPrefs.SetString("UserName", result.DisplayName);
+        
     }
 
     public void SendLeaderBoard(int score)

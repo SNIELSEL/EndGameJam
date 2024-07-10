@@ -5259,6 +5259,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 174903824339593166, guid: 469cb0e58c78149468f8ab5c60f2d132,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlusPoint
+      objectReference: {fileID: 0}
     - target: {fileID: 522623751292919131, guid: 469cb0e58c78149468f8ab5c60f2d132,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -5318,6 +5323,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -241.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069456138280960048, guid: 469cb0e58c78149468f8ab5c60f2d132,
+        type: 3}
+      propertyPath: m_TagString
+      value: PlusTijd
       objectReference: {fileID: 0}
     - target: {fileID: 6158025280549295760, guid: 469cb0e58c78149468f8ab5c60f2d132,
         type: 3}
